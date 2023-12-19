@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as *;
+
+.commitments {
+  @media (max-width: 375px) {
+    padding: $section-padding-sm;
+  }
+  padding: $section-padding-md;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @media (min-width: 768px) {
+    padding: $section-padding-lg;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .commitments-statistics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    h2 {
+      font-weight: $fw-semimedium;
+    }
+  }
+  .commitments-intro {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+
+    button {
+      background-color: transparent;
+      color: $clr-primary-400;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      svg {
+        transition: transform 0.5s ease-in-out;
+      }
+      &:hover svg {
+        transform: translateX(0.5rem);
+      }
+    }
+  }
+}

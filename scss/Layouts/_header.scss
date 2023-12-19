@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as *;
+@use "../Components/button" as *;
+@use "../abstracts/mixins" as *;
+
+header {
+  @media (max-width: 375px) {
+    padding: 1rem $sm-padding;
+  }
+  padding: 1rem $md-padding;
+  @media (min-width: 768px) {
+    padding: 1.5rem $lg-padding;
+  }
+  @include flex-container($justify-content: space-between);
+  border-bottom: 1px solid $clr-neutral-600;
+  .flex-group {
+    @include flex-container($align-items: center);
+  }
+  .logo-name {
+    font-size: $fs-600;
+    font-weight: $fw-bold;
+    color: $clr-neutral-900;
+  }
+  nav {
+    display: flex;
+    @media (max-width: 768px) {
+      display: none;
+    }
+    ul {
+      @include flex-container($align-items: center);
+      list-style: none;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+      li {
+        text-decoration: none;
+        a {
+          text-decoration: none;
+          color: $clr-neutral-900;
+          font-size: $fs-400;
+        }
+      }
+    }
+  }
+}

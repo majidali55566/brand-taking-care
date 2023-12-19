@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../Components/input-text-field";
+
+$gap-400: 1rem;
+
+.our-service-section {
+  @media (max-width: 375px) {
+    padding: $section-padding-sm;
+  }
+  padding: $section-padding-md;
+  gap: $gap-400;
+  @include flex-container($direction: column-reverse, $align-items: center);
+  @media (min-width: 768px) {
+    padding: $section-padding-lg;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-intro {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-400;
+  }
+  .email-us-container {
+    display: flex;
+    gap: $gap-400;
+    @media (min-width: 768px) {
+      @include flex-container($justify-content: flex-start);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.our-team {
+  @media (max-width: 375px) {
+    padding: $section-padding-sm;
+  }
+
+  padding: $section-padding-md;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    padding: $section-padding-lg;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .team-members {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    & > * {
+      border-radius: 1rem;
+    }
+
+    & > :nth-child(3),
+    & > :nth-child(4) {
+      border-radius: 100%;
+    }
+  }
+
+  .meet-team-container {
+    @include flex-container(
+      $direction: column,
+      $justify-content: space-between,
+      $align-items: start
+    );
+
+    gap: 1rem;
+
+    .meet-team-info2 {
+      display: grid;
+      gap: 1rem;
+    }
+  }
+}

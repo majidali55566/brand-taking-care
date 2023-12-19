@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.brand-elevation {
+  @media (max-width: 375px) {
+    margin: $section-padding-sm;
+    padding: $section-padding-sm;
+  }
+  margin: $section-padding-md;
+  padding: $section-padding-md;
+  border-radius: 2rem;
+  display: grid;
+  gap: 2rem;
+  @media (min-width: 768px) {
+    display: flex;
+    margin: $section-padding-lg;
+    padding: $section-padding-lg;
+  }
+  background-image: url("../images/cta-banner.svg");
+  color: $clr-neutral-100;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2 {
+    color: $clr-neutral-100;
+  }
+  .book-service-container {
+    @include flex-container(
+      $direction: column,
+      $align-items: start,
+      $justify-content: center
+    );
+    gap: 2rem;
+    p {
+      color: $clr-neutral-100;
+    }
+    button {
+      padding-inline: 2rem;
+      background-color: $clr-neutral-100;
+      color: $clr-neutral-900;
+      &:hover {
+        background-color: $clr-neutral-900;
+        color: $clr-neutral-100;
+      }
+    }
+  }
+}

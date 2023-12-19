@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.start-your-journey {
+  @media (max-width: 375px) {
+    padding: $section-padding-sm;
+  }
+  padding: $section-padding-md;
+  @media (min-width: 768px) {
+    padding: $section-padding-lg;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    background-image: url("../images/black-withlines.svg");
+    background-size: cover;
+    border-radius: 5rem;
+    padding: 2rem 4rem;
+    gap: 1rem;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      gap: 3rem;
+    }
+    .start-journey-intro {
+      h3 {
+        color: $clr-neutral-100;
+      }
+      @include flex-container($direction: column, $align-items: start);
+      gap: 1rem;
+      @media (min-width: 768px) {
+        @include flex-container(
+          $direction: column,
+          $align-items: self-start,
+          $justify-content: space-evenly
+        );
+        gap: 3rem;
+      }
+    }
+    // img {
+    //   width: 352px;
+    //   height: 352px;
+    // }
+  }
+}

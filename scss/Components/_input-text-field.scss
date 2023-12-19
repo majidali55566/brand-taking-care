@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as *;
+input {
+  border: 1px solid $clr-neutral-600;
+  border-radius: 2rem;
+  background-color: hsla(0, 0%, 67%, 0.336);
+  padding: 0.5rem 1rem;
+  &:focus {
+    border: 1px solid $clr-primary-400;
+  }
+  @media (min-width: 768px) {
+    padding: 1rem 0.5rem;
+  }
+}

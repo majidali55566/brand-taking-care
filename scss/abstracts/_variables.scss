@@ -1,0 +1,44 @@
+$fs-400: 1rem;
+$fs-450: 1.125rem;
+$fs-500: 1.25rem;
+$fs-550: 1.5rem;
+$fs-600: 1.75rem;
+$fs-650: 2rem;
+$fs-700: 2.25rem;
+$fs-750: 3.5rem;
+$fs-800: 4rem;
+$fs-900: 6rem;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semimedium: 600;
+$fw-bold: 700;
+
+$ff-primary: "Roboto", sans-serif;
+$ff-secondary: Helvetica;
+
+// Opacity Variables
+$opacity-lighest: 0.2;
+$opacity-light: 0.8;
+$opacity-medium: 0.6;
+
+$clr-primary-400: hsl(227, 100%, 60%);
+$clr-primary-500: hsl(227, 100%, 50%);
+$clr-neutral-100: hsl(100, 100, 100%);
+$clr-neutral-200: hsl(100, 100, 98%);
+
+$clr-neutral-600: hsl(0, 0, 0%, $opacity-lighest);
+$clr-neutral-700: hsl(0, 0, 0%, $opacity-medium);
+$clr-neutral-800: hsl(0, 0, 0%, $opacity-light);
+$clr-neutral-900: hsl(0, 0, 0%);
+
+// padding for desktop and mobile devices
+$sm-padding: 1rem;
+$md-padding: 2rem;
+$lg-padding: 4rem;
+$xl-padding: 6rem;
+
+//Section padding
+$section-padding-sm: $sm-padding;
+$section-padding-md: $md-padding;
+$section-padding-lg: $lg-padding;

@@ -1,0 +1,27 @@
+| Font Size (rem) | Font Size (px) | Base Font Size (16px) |
+|------------------|----------------|-----------------------|
+| 1rem (fs-400)    | 16px           | 16px                  |
+| 1.125rem (fs-450)| 18px           | 16px                  |
+| 1.25rem (fs-500) | 20px           | 16px                  |
+| 1.5rem (fs-550)  | 24px           | 16px                  |
+| 1.75rem (fs-600) | 28px           | h6                  |
+| 2rem (fs-650)    | 32px           | h5                  |
+| 2.25rem (fs-700) | 36px           | h4                  |
+| 3.5rem (fs-750)  | 56px           | h3                  |
+| 4rem (fs-800)    | 64px           | h2                |
+| 6rem (fs-900)    | 96px           | h1                 |
+
+
+//for mobile
+| Font Size (rem) | Font Size (px) | Font Size on Mobile (px) | Corresponding Heading |
+|------------------|----------------|--------------------------|------------------------|
+| 1rem (fs-400)    | 16px           | 16px                    |                        |
+| 1.125rem (fs-450)| 18px           | 18px                   |                        |
+| 1.25rem (fs-500) | 20px           | 20px                  |                        |
+| 1.5rem (fs-550)  | 24px           | 24px                 |                        |
+| 1.75rem (fs-600) | 28px           | 28px                 | h6                     |
+| 2rem (fs-650)    | 32px           | 32px                 | h5                     |
+| 2.25rem (fs-700) | 36px           | 36px                 | h4                     |
+| 3.5rem (fs-750)  | 56px           | 48px (or smaller)    | h3                     |
+| 4rem (fs-800)    | 64px           | 48px (or smaller)    | h2                     |
+| 6rem (fs-900)    | 96px           | 72px (or smaller)    | h1                     |

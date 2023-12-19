@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.our-partners-section {
+  background-color: #fafafa;
+  .our-partners-container {
+    @media (max-width: 357px) {
+      padding: $section-padding-sm;
+    }
+    @include flex-container($direction: column, $align-items: center);
+    gap: 4rem;
+    padding: $section-padding-md;
+    @media (min-width: 768px) {
+      padding: $section-padding-lg;
+    }
+    .partners {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+  }
+}

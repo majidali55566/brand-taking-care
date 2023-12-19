@@ -1,0 +1,110 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.our-clients-responses {
+  @media (max-width: 375px) {
+    padding: $section-padding-sm;
+  }
+  padding: $section-padding-md;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    padding: $section-padding-lg;
+  }
+  .clients-response-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+    .prev-next-btn-container.prev-next-btn-desktop {
+      @include flex-container($justify-content: center, $align-items: center);
+      gap: 2rem;
+      display: none;
+      @media (min-width: 768px) {
+        display: flex;
+      }
+      button {
+        background-color: hsl(231, 100%, 90%);
+        padding: 1.3rem;
+        &:hover {
+          background-color: $clr-primary-400;
+        }
+        svg {
+          color: #f8f9ff;
+          max-width: 1rem;
+          max-height: 1rem;
+        }
+      }
+    }
+  }
+
+  .our-clients-response-slider {
+    .client-response-card {
+      background-color: #f8f9ff;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2.4rem;
+      border-radius: 1.5rem;
+      margin: 1rem;
+      .profile {
+        display: flex;
+        gap: 1.25rem;
+        .intro {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          p {
+            font-size: $fs-450;
+            font-weight: $fw-medium;
+            color: $clr-neutral-900;
+          }
+        }
+      }
+      p {
+        color: $clr-neutral-700;
+      }
+      &:hover {
+        background-color: $clr-primary-400;
+        .profile {
+          .intro {
+            p {
+              color: hsl(0, 0%, 100%, 80%);
+            }
+            h6 {
+              color: $clr-neutral-100;
+            }
+          }
+        }
+        p {
+          color: hsl(0, 0%, 100%, 80%);
+        }
+      }
+    }
+  }
+
+  .prev-next-btn-container.prev-next-btn-mobile {
+    @include flex-container($justify-content: center, $align-items: center);
+    gap: 2rem;
+    display: flex;
+    @media (min-width: 768px) {
+      display: none;
+    }
+    button {
+      background-color: hsl(231, 100%, 90%);
+      padding: 1rem;
+      &:hover {
+        background-color: $clr-primary-400;
+      }
+      svg {
+        color: #f8f9ff;
+        max-width: 1rem;
+        max-height: 1rem;
+      }
+    }
+  }
+}
